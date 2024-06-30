@@ -2,7 +2,7 @@
 
 FROM scratch
 
-LABEL maintainer="Tanc"
+LABEL maintainer="TChilderhose"
 
 # copy local files
 COPY root/ /

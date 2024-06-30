@@ -13,7 +13,7 @@ This mod is to be used with [linuxserver/qbittorrent container](https://github.c
 ## Install 
 
 Follow the instructions [here](https://docs.linuxserver.io/general/container-customization/#docker-mods).
-With the following link for the mod `ghcr.io/t-anc/gsp-qbittorent-gluetun-sync-port-mod:main`.
+With the following link for the mod `ghcr.io/tchilderhose/gsp-qbittorent-gluetun-sync-port-mod:main`.
 
 - You will need to enable `Bypass authentication for clients on localhost` inside qbittorrent's `settings` > `Web UI`. Otherwise you can set the `GSP_QBT_USERNAME` and `GSP_QBT_PASSWORD` (or `GSP_QBT_PASSWORD_FILE`) variables.
 - If you have enabled the `Enable Host header validation` option, you will need to add `localhost` to the `Server domains` list.
@@ -62,7 +62,7 @@ services:
         environment:
           - TZ=Europe/Paris
           - WEBUI_PORT=8080
-          - DOCKER_MODS=ghcr.io/t-anc/gsp-qbittorent-gluetun-sync-port-mod:main
+          - DOCKER_MODS=ghcr.io/tchilderhose/gsp-qbittorent-gluetun-sync-port-mod:main
           - GSP_SLEEP=120
           - GSP_MINIMAL_LOGS=false
         volumes:
@@ -90,10 +90,10 @@ docker logs -f qbittorrent
 
 ```log
 [mod-init] Running Docker Modification Logic
-[mod-init] Adding t-anc/gsp-qbittorent-gluetun-sync-port-mod:main to container
-[mod-init] Downloading t-anc/gsp-qbittorent-gluetun-sync-port-mod:main from ghcr.io
-[mod-init] Installing t-anc/gsp-qbittorent-gluetun-sync-port-mod:main
-[mod-init] t-anc/gsp-qbittorent-gluetun-sync-port-mod:main applied to container
+[mod-init] Adding tchilderhose/gsp-qbittorent-gluetun-sync-port-mod:main to container
+[mod-init] Downloading tchilderhose/gsp-qbittorent-gluetun-sync-port-mod:main from ghcr.io
+[mod-init] Installing tchilderhose/gsp-qbittorent-gluetun-sync-port-mod:main
+[mod-init] tchilderhose/gsp-qbittorent-gluetun-sync-port-mod:main applied to container
 [migrations] started
 [migrations] no migrations found
 usermod: no changes
